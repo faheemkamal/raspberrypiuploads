@@ -3,13 +3,14 @@ cd ~
 cd rpf-linux-kernel
 git reset --hard 6820d0cbec64cfee481b961833feffec8880111e
 make mrproper
-curl -O https://raw.githubusercontent.com/raspberrypi/firmware/master/extra/Module7.symvers
-mv Module7.symvers Module.symvers
 make bcm2709_defconfig
 make modules_prepare
+curl -O https://raw.githubusercontent.com/raspberrypi/firmware/stable/extra/Module7.symvers
+mv Module7.symvers Module.symvers
 sudo ln -s /home/pi/rpf-linux-kernel/ /lib/modules/$(uname -r)/build
 
 cd ~
+git clone https://github.com/xor-function/usb-ethernet-adapter
 cd usb-ethernet-adapter
 make
 sudo make install
