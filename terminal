@@ -4,9 +4,9 @@ cd rpf-linux-kernel
 git reset --hard 6820d0cbec64cfee481b961833feffec8880111e
 make mrproper
 make bcm2709_defconfig
-make modules_prepare
 curl -O https://raw.githubusercontent.com/raspberrypi/firmware/stable/extra/Module7.symvers
 mv Module7.symvers Module.symvers
+make modules_prepare
 sudo ln -s /home/pi/rpf-linux-kernel/ /lib/modules/$(uname -r)/build
 
 cd ~
