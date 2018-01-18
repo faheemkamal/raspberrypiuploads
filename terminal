@@ -1,4 +1,5 @@
-sudo apt-get install bc
+sudo apt-get update
+sudo apt-get install bc dnsmasq hostapd bridge-utils
 cd ~
 cd rpf-linux-kernel
 git reset --hard 6820d0cbec64cfee481b961833feffec8880111e
