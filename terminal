@@ -33,3 +33,6 @@ sudo apt-get autoremove adwaita-icon-theme alacarte alsa-base aspell aspell-en b
 #for startup scripts#
 sudo leafpad /etc/rc.local
 sh '/home/pi/script.sh'
+
+#configure pppoe
+sudo pppoeconf
